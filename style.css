@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: 'Roboto', sans-serif;
+  
+}
+header{
+    padding: 10px;
+    position: relative;
+    
+}
+nav {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+header>nav>ul{
+    display: inline-flex;
+    gap: 50px;
+    list-style: none;
+
+    
+
+}
+h2{
+    text-align: center;
+    color:#121212;
+}
+header img{
+    width: 90px;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+}
+header a{
+    color:#121212;
+    text-decoration: none;
+}
+form{
+    width: 70%;
+    position: absolute;
+    left: 100px;
+    right: 100px;
+}
+.container {
+  background: linear-gradient(135deg, #adceff 0%, #964cf3 100%);
+}
