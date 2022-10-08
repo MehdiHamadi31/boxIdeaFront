@@ -8,7 +8,7 @@ header {
   padding: 10px;
   position: relative;
 }
-nav {
+nav:not(.mobile-nav) {
   width: 100%;
   text-align: center;
 }
@@ -17,7 +17,7 @@ h1 {
   color: #ffffff;
   font-size: 40px;
 }
-header > nav > ul {
+header > nav:not(.mobile-nav) > ul {
   display: inline-flex;
   gap: 50px;
   list-style: none;
@@ -40,7 +40,10 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-
+.burger{
+  display: none;
+  
+}
 footer {
   display: flex;
   justify-content: space-between;
@@ -64,19 +67,51 @@ footer p {
 main {
   background: linear-gradient(135deg, #adceff 0%, #964cf3 100%);
 }
+.mobile-nav{
+  background-color: #ffffff;
+  color: #121212;
+  width: 400px;
+  max-width: 100%;
+  height: 100vh;
+  padding-top: 70px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  transform: translateX(-100%);
+ 
+}
+.mobile-nav ul{
+  list-style: none;
+  font-size: 25px;
+}
+.mobile-nav li{
+  margin-bottom:20px;
+}
+
 @media screen and (max-width: 570px) {
     header nav{
         display:none;
     }
-    header a {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+    header{
+      text-align: center;
     }
     header img {
-        position: relative;
-        left: 0;
+      position: relative;
+      margin-top: 15px;
+      top: unset;
+      left: unset;
+
+    }
+    .burger{
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+    .mobile-nav{
+      display: block;
     }
 }
 
@@ -88,6 +123,7 @@ main {
     padding: 25px 25px;
   }
 }
+
 
 /******Index*********/
 
@@ -119,10 +155,10 @@ main.index {
   padding-bottom: 5px;
   height: 30px;
   border: 1px solid #121212;
-  padding-left: 10px;
 }
 .index input::placeholder {
   font-size: 10px;
+  padding-left: 10px;
 }
 
 .index .buttons {
@@ -144,6 +180,24 @@ main.index {
 .index .buttons a {
   font-size: 12px;
   color: #544b8c;
+}
+@media screen and (max-width:650px) {
+  .index .container{
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width:400px) {
+  .index .buttons button:last-child{
+    margin-right: 0px;
+
+    
+  }
+  h1{
+    font-size: 27px;
+  }
+  .index form {
+    padding: 25px 20px;
+  }
 }
 
 /*******Projets*********/
@@ -197,6 +251,15 @@ main.index {
   background-color: #3a3939;
   color: #ffffff;
   cursor: pointer;
+}
+@media screen and (max-width:400px) {
+  .vote{
+    padding: 0 10px;
+    font-size: 15px;
+  }
+  .card-footer{
+    padding: 25px 15px;
+  }
 }
 .vote span {
   font-size: 25px;

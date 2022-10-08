@@ -16,12 +16,21 @@
   </head>
   <body>
     <header>
-        <svg width="32" height="32" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M7.94971 11.9497H39.9497"/><path d="M7.94971 23.9497H39.9497"/><path d="M7.94971 35.9497H39.9497"/></g></svg>
-        
       <a href="index.html"
-        ><img src="/ressources/logo.png" alt="notre logo"
+        ><img src="ressources/logo.png" alt="notre logo"
       /></a>
-      <nav>
+        <svg class="burger" width="32" height="32" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M7.94971 11.9497H39.9497"/><path d="M7.94971 23.9497H39.9497"/><path d="M7.94971 35.9497H39.9497"/></g></svg>
+        <nav class="mobile-nav">
+          <ul>
+            <li>
+              <a href="index.html"><u>Accueil</u></a>
+            </li>
+            <li><a href="membres.html">Membres</a></li>
+            <li><a href="projets.html">Projets</a></li>
+          </ul>
+
+        </nav>
+        <nav>
         <ul>
           <li>
             <a href="index.html"><u>Accueil</u></a>
@@ -33,7 +42,7 @@
     </header>
     <main class="index">
       <div class="container">
-        <h1>Bienvenue chez Box Idea &emsp; &emsp; &emsp;</h1>
+        <h1>Bienvenue chez Box Idea </h1>
         <form class="form" action="http://127.0.0.1:3333" method="post">
           <h2>Je m 'identifie</h2>
           <label for="mail">Identifiez-vous</label>
