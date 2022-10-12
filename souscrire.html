@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
-    <title>Accueil</title>
+    <title>Inscription</title>
   </head>
   <body>
     <header>
@@ -45,7 +45,7 @@
       <nav>
         <ul>
           <li>
-            <a href="index.html"><u>Accueil</u></a>
+            <a href="index.html">Accueil</a>
           </li>
           <li><a href="membres.html">Membres</a></li>
           <li><a href="projets.html">Projets</a></li>
@@ -54,10 +54,12 @@
     </header>
     <main class="index">
       <div class="container">
-        <h1>Bienvenue chez Box Idea</h1>
+        <h1>Création de votre compte</h1>
         <form class="form" action="http://127.0.0.1:3333" method="post">
-          <h2>Je m 'identifie</h2>
-          <label for="mail">Identifiez-vous</label>
+          <h2>Inscription</h2>
+          <label for="nom">Veuillez entrer votre nom</label>
+          <input type="text" name="nom" placeholder="nom" id="nom" />
+          <label for="mail">Veuillez entrer votre email</label>
           <input type="email" name="mail" placeholder="mail" id="mail" />
           <label for="mdp">Saissir votre mot de passe</label>
           <input
@@ -66,8 +68,14 @@
             placeholder="mot de passe"
             id="mdp"
           />
+          <label for="mdp">Confirmer votre mot de passe</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="mot de passe"
+            id="mdp"
+          />
           <div class="buttons">
-            <a href="souscrire.html">Je n 'ai pas encore de compte</a>
             <button type="submit">Valider</button>
           </div>
         </form>
