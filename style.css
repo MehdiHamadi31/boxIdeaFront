@@ -1,3 +1,9 @@
+.hidden{
+  display: none;
+}
+
+
+
 body {
   height: 100vh;
   display: grid;
@@ -155,11 +161,13 @@ main.index {
   margin-bottom: 8px;
 }
 .index input {
-  margin-bottom: 20px;
   border-radius: 7px;
   padding-bottom: 5px;
   height: 30px;
   border: 1px solid #121212;
+  }
+.index input:not(.error){
+  margin-bottom: 20px;
 }
 .index input::placeholder {
   font-size: 10px;
@@ -185,6 +193,14 @@ main.index {
 .index .buttons a {
   font-size: 12px;
   color: #544b8c;
+}
+.index p{
+  color: red;
+  font-size: 10px;
+  margin: 5px 0 20px 10px;
+}
+.index input.error +p{
+  display: block;
 }
 @media screen and (max-width:650px) {
   .index .container{
@@ -218,6 +234,11 @@ main.index {
   background-color: #ffffff;
   color: #121212;
   padding-top: 15px;
+}
+.card2 {
+  background-color: #ffffff;
+  color: #121212;
+  padding: 15px;
 }
 .card h3,
 .card p {
@@ -272,6 +293,7 @@ main.index {
 .card p {
   margin-bottom: 25px;
 }
+
 @media screen and (max-width: 865px) {
   .projets .container {
     grid-template-columns: 1fr;
@@ -362,3 +384,16 @@ main.index {
     grid-template-columns: 1fr;
   }
 }
+/*******Tests*********/
+
+#pop{
+  background-color: #ddebff;
+  padding: 30px;
+  
+}
+#bt{
+  position: relative;
+  
+  
+}
+

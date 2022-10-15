@@ -1,111 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="./index.js" defer></script>
 
-    <title>Projets</title>
-  </head>
-  <body>
-    <header>
-        <a href="index.html"><img src="ressources/logo.png" alt="notre logo" /></a>
-        <svg class="burger" width="32" height="32" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M7.94971 11.9497H39.9497"/><path d="M7.94971 23.9497H39.9497"/><path d="M7.94971 35.9497H39.9497"/></g></svg>
-        <nav class="mobile-nav hide">
-          <ul>
-            <li>
-              <a href="index.html">Accueil</a>
-            </li>
-            <li><a href="membres.html">Membres</a></li>
-            <li><a href="projets.html">Projets</a></li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./index.js" defer></script>
 
-        </nav>
-        <nav>
-        <ul>
-          <li>
-            <a href="index.html">Accueil</a>
-          </li>
-          <li>
-            <a href="membres.html">Membres</a>
-          </li>
-          <li><a href="projets.html"><u>Projets</u></a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="projets">
-        <div class="container">
-            <div class="card">
-                <h3>Entraide entre élèves</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illum quis deserunt earum ipsa molestias cumque neque explicabo quisquam voluptates nostrum doloribus et, sint, nesciunt tempora repellendus suscipit aliquid. Totam!
-                        Officia reprehenderit illo explicabo doloremque tenetur ipsam laudantium dignissimos officiis autem vero voluptatum cupiditate, iure, esse, commodi quidem exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam? Modi placeat quia enim temporibus.
-                    </p>
-            <div class="card-footer">
-                <div class="membre">
-                    <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg"alt="Avatar">
-                    <p>Proposé par <span class="name">Mehdi</span>  </p>
-                </div>
-                <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
-            </div>
-            </div>
-            <div class="card">
-              <h3>Entraide entre élèves</h3>
-                  <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illum quis deserunt earum ipsa molestias cumque neque explicabo quisquam voluptates nostrum doloribus et, sint, nesciunt tempora repellendus suscipit aliquid. Totam!
-                      Officia reprehenderit illo explicabo doloremque tenetur ipsam laudantium dignissimos officiis autem vero voluptatum cupiditate, iure, esse, commodi quidem exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam? Modi placeat quia enim temporibus.
-                  </p>
-          <div class="card-footer">
-              <div class="membre">
-                  <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg"alt="">
-                  <p>Proposé par <span class="name">Mehdi</span>  </p>
-              </div>
-              <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
-          </div>
-          </div>
-          <div class="card">
-            <h3>Entraide entre élèves</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illum quis deserunt earum ipsa molestias cumque neque explicabo quisquam voluptates nostrum doloribus et, sint, nesciunt tempora repellendus suscipit aliquid. Totam!
-                    Officia reprehenderit illo explicabo doloremque tenetur ipsam laudantium dignissimos officiis autem vero voluptatum cupiditate, iure, esse, commodi quidem exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam? Modi placeat quia enim temporibus.
-                </p>
+  <title>Projets</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="ressources/logo.png" alt="notre logo" /></a>
+    <svg class="burger" width="32" height="32" viewBox="0 0 48 48">
+      <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+        <path d="M7.94971 11.9497H39.9497" />
+        <path d="M7.94971 23.9497H39.9497" />
+        <path d="M7.94971 35.9497H39.9497" />
+      </g>
+    </svg>
+    <nav class="mobile-nav hide">
+      <ul>
+        <li>
+          <a href="index.html">Accueil</a>
+        </li>
+        <li><a href="membres.html">Membres</a></li>
+        <li><a href="projets.html">Projets</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Accueil</a>
+        </li>
+        <li>
+          <a href="membres.html">Membres</a>
+        </li>
+        <li>
+          <a href="projets.html"><u>Projets</u></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="projets">
+    <div class="container">
+      <div class="card">
+        <h3>Entraide entre élèves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+          illum quis deserunt earum ipsa molestias cumque neque explicabo
+          quisquam voluptates nostrum doloribus et, sint, nesciunt tempora
+          repellendus suscipit aliquid. Totam! Officia reprehenderit illo
+          explicabo doloremque tenetur ipsam laudantium dignissimos officiis
+          autem vero voluptatum cupiditate, iure, esse, commodi quidem
+          exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam?
+          Modi placeat quia enim temporibus.
+        </p>
         <div class="card-footer">
-            <div class="membre">
-                <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg"alt="">
-                <p>Proposé par <span class="name">Mehdi</span>  </p>
-            </div>
-            <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
-        </div>
-        </div>
-        <div class="card">
-          <h3>Entraide entre élèves</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illum quis deserunt earum ipsa molestias cumque neque explicabo quisquam voluptates nostrum doloribus et, sint, nesciunt tempora repellendus suscipit aliquid. Totam!
-                  Officia reprehenderit illo explicabo doloremque tenetur ipsam laudantium dignissimos officiis autem vero voluptatum cupiditate, iure, esse, commodi quidem exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam? Modi placeat quia enim temporibus.
-              </p>
-      <div class="card-footer">
           <div class="membre">
-              <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg"alt="">
-              <p>Proposé par <span class="name">Mehdi</span>  </p>
+            <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg" alt="Avatar" />
+            <p>Proposé par <span class="name">Mehdi</span></p>
           </div>
           <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
-      </div>
-      </div>
         </div>
+      </div>
+      <div class="card">
+        <h3>Entraide entre élèves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+          illum quis deserunt earum ipsa molestias cumque neque explicabo
+          quisquam voluptates nostrum doloribus et, sint, nesciunt tempora
+          repellendus suscipit aliquid. Totam! Officia reprehenderit illo
+          explicabo doloremque tenetur ipsam laudantium dignissimos officiis
+          autem vero voluptatum cupiditate, iure, esse, commodi quidem
+          exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam?
+          Modi placeat quia enim temporibus.
+        </p>
+        <div class="card-footer">
+          <div class="membre">
+            <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg" alt="" />
+            <p>Proposé par <span class="name">Mehdi</span></p>
+          </div>
+          <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Entraide entre élèves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+          illum quis deserunt earum ipsa molestias cumque neque explicabo
+          quisquam voluptates nostrum doloribus et, sint, nesciunt tempora
+          repellendus suscipit aliquid. Totam! Officia reprehenderit illo
+          explicabo doloremque tenetur ipsam laudantium dignissimos officiis
+          autem vero voluptatum cupiditate, iure, esse, commodi quidem
+          exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam?
+          Modi placeat quia enim temporibus.
+        </p>
+        <div class="card-footer">
+          <div class="membre">
+            <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg" alt="" />
+            <p>Proposé par <span class="name">Mehdi</span></p>
+          </div>
+          <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Entraide entre élèves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+          illum quis deserunt earum ipsa molestias cumque neque explicabo
+          quisquam voluptates nostrum doloribus et, sint, nesciunt tempora
+          repellendus suscipit aliquid. Totam! Officia reprehenderit illo
+          explicabo doloremque tenetur ipsam laudantium dignissimos officiis
+          autem vero voluptatum cupiditate, iure, esse, commodi quidem
+          exercitationem ipsa dolorum? Suscipit deserunt excepturi veniam?
+          Modi placeat quia enim temporibus.
+        </p>
+        <div class="card-footer">
+          <div class="membre">
+            <img src="https://www.numerama.com/wp-content/uploads/2019/06/ubuntu-linux.jpg" alt="" />
+            <p>Proposé par <span class="name">Mehdi</span></p>
+          </div>
+          <button class="vote"><span>👍&nbsp;&nbsp;</span> +1</button>
+        </div>
+      </div>
+    </div>
 
-    </main>
-  </body>
-  <footer>
-    <p>© Tous droits réservés</p>
-    <button>Déconnexion</button>
-  </footer>
+
+
+    <div class="container">
+      <form class="form" action="http://127.0.0.1:3333/projects/all" method="post">
+        <div id="pop">
+          <h3>Proposition de projet</h3>
+          <label for="nom">Donnez un titre à votre idée</label><br><br>
+          <input type="text" name="nom" placeholder="titre" /><br><br><br>
+
+          <label for="description">Description</label><br><br>
+          <textarea name="nom" rows="10" cols="40" placeholder="description"></textarea><br>
+
+
+          <div class="buttons"><br>
+            <button type="submit" id="bt">Valider</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  </main>
+</body>
+<footer>
+  <p>© Tous droits réservés</p>
+  <button>Déconnexion</button>
+</footer>
+
 </html>

@@ -55,10 +55,11 @@
     <main class="index">
       <div class="container">
         <h1>Bienvenue chez Box Idea</h1>
-        <form class="form" action="http://127.0.0.1:3333" method="post">
+        <form class="form" id="form-index" action="http://127.0.0.1:3333" method="post">
           <h2>Je m 'identifie</h2>
           <label for="mail">Identifiez-vous</label>
           <input type="email" name="mail" placeholder="mail" id="mail" />
+          <p class="hidden">mauvais login </p>
           <label for="mdp">Saissir votre mot de passe</label>
           <input
             type="password"
@@ -66,6 +67,7 @@
             placeholder="mot de passe"
             id="mdp"
           />
+          <p class="hidden">mauvais password</p>
           <div class="buttons">
             <a href="souscrire.html">Je n 'ai pas encore de compte</a>
             <button type="submit">Valider</button>
