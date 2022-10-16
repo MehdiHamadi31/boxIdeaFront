@@ -1,8 +1,6 @@
-.hidden{
+.hidden {
   display: none;
 }
-
-
 
 body {
   height: 100vh;
@@ -47,9 +45,8 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-.burger{
+.burger {
   display: none;
-  
 }
 footer {
   display: flex;
@@ -74,56 +71,53 @@ footer p {
 main {
   background: linear-gradient(135deg, #adceff 0%, #964cf3 100%);
 }
-.mobile-nav{
+.mobile-nav {
   background-color: #ffffff;
   color: #121212;
   width: 400px;
   max-width: 100%;
   height: 100vh;
   padding-top: 70px;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   display: none;
   z-index: -1;
- 
 }
-.mobile-nav.hide{
+.mobile-nav.hide {
   transform: translateX(-100%);
-
 }
-.mobile-nav ul{
+.mobile-nav ul {
   list-style: none;
   font-size: 25px;
 }
-.mobile-nav li{
-  margin-bottom:20px;
+.mobile-nav li {
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 570px) {
-    header nav{
-        display:none;
-    }
-    header{
-      text-align: center;
-    }
-    header img {
-      position: relative;
-      margin-top: 15px;
-      top: unset;
-      left: unset;
-
-    }
-    .burger{
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      left: 0;
-      margin: 25px;
-    }
-    .mobile-nav{
-      display: block;
-    }
+  header nav {
+    display: none;
+  }
+  header {
+    text-align: center;
+  }
+  header img {
+    position: relative;
+    margin-top: 15px;
+    top: unset;
+    left: unset;
+  }
+  .burger {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+  .mobile-nav {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -134,7 +128,6 @@ main {
     padding: 25px 25px;
   }
 }
-
 
 /******Index*********/
 
@@ -165,8 +158,8 @@ main.index {
   padding-bottom: 5px;
   height: 30px;
   border: 1px solid #121212;
-  }
-.index input:not(.error){
+}
+.index input:not(.error) {
   margin-bottom: 20px;
 }
 .index input::placeholder {
@@ -194,26 +187,24 @@ main.index {
   font-size: 12px;
   color: #544b8c;
 }
-.index p{
+.index p {
   color: red;
   font-size: 10px;
   margin: 5px 0 20px 10px;
 }
-.index input.error +p{
+.index input.error + p {
   display: block;
 }
-@media screen and (max-width:650px) {
-  .index .container{
+@media screen and (max-width: 650px) {
+  .index .container {
     padding: 0 20px;
   }
 }
-@media screen and (max-width:400px) {
-  .index .buttons button:last-child{
+@media screen and (max-width: 400px) {
+  .index .buttons button:last-child {
     margin-right: 0px;
-
-    
   }
-  h1{
+  h1 {
     font-size: 27px;
   }
   .index form {
@@ -231,6 +222,9 @@ main.index {
   margin: 60px auto;
 }
 .card {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   color: #121212;
   padding-top: 15px;
@@ -252,6 +246,7 @@ main.index {
   padding: 25px 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .card-footer .membre {
   display: flex;
@@ -269,7 +264,7 @@ main.index {
   font-size: 12px;
 }
 .vote {
-  padding: 0px 20px;
+  padding: 10px 20px;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -278,20 +273,26 @@ main.index {
   color: #ffffff;
   cursor: pointer;
 }
-@media screen and (max-width:400px) {
-  .vote{
+.total-vote {
+  border: 2px solid #121212;
+  padding: 5px 10px !important;
+  margin: 0 !important;
+}
+@media screen and (max-width: 400px) {
+  .vote {
     padding: 0 10px;
     font-size: 15px;
   }
-  .card-footer{
+  .card-footer {
     padding: 25px 15px;
   }
 }
 .vote span {
   font-size: 25px;
 }
-.card p {
+.card .total-vote {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 @media screen and (max-width: 865px) {
@@ -303,6 +304,16 @@ main.index {
   .projets .container {
     width: 90%;
   }
+}
+@media screen and (max-width: 430px) {
+  .projets .container .card-footer {
+    flex-direction: column-reverse;
+    align-items: unset;
+  }
+  .projets .total-vote {
+    margin-bottom: 25px !important;
+  }
+
 }
 
 /*******Membres*********/
@@ -384,16 +395,13 @@ main.index {
     grid-template-columns: 1fr;
   }
 }
+
 /*******Tests*********/
 
-#pop{
+#pop {
   background-color: #ddebff;
   padding: 30px;
-  
 }
-#bt{
+#bt {
   position: relative;
-  
-  
 }
-
