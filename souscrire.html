@@ -55,10 +55,12 @@
     <main class="index">
       <div class="container">
         <h1>Création de votre compte</h1>
-        <form class="form" action="http://127.0.0.1:3333" method="post">
+        <form class="form" id="form-register" action="http://127.0.0.1:3333/register" method="post">
           <h2>Inscription</h2>
+          <label for="nom">Veuillez entrer votre prenom</label>
+          <input type="text" name="prenom" placeholder="prenom" id="firstname" />
           <label for="nom">Veuillez entrer votre nom</label>
-          <input type="text" name="nom" placeholder="nom" id="nom" />
+          <input type="text" name="nom" placeholder="nom" id="lastname" />
           <label for="mail">Veuillez entrer votre email</label>
           <input type="email" name="mail" placeholder="mail" id="mail" />
           <label for="mdp">Saissir votre mot de passe</label>
@@ -66,14 +68,14 @@
             type="password"
             name="password"
             placeholder="mot de passe"
-            id="mdp"
+            id="password"
           />
           <label for="mdp">Confirmer votre mot de passe</label>
           <input
             type="password"
             name="password"
             placeholder="mot de passe"
-            id="mdp"
+            id="password"
           />
           <div class="buttons">
             <button type="submit">Valider</button>

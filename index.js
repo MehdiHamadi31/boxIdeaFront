@@ -4,13 +4,15 @@ const burger = document.querySelector(".burger");
 const mobileNav = document.querySelector(".mobile-nav");
 
 burger.addEventListener("click", () => {
-  mobileNav.classList.toggle("hide");
+  mobileNav.classList.toggle("hide"); // toggle agit comme un interrupteur apparait/disparait
 });
 
+//on cherche la clé loggin si elle est a true  c 'est que la personne est logger et on supprime alors l accueil
 if (localStorage.getItem("login") === "true") {
   document.querySelectorAll('a[href="index.html"]').forEach((a) => {
     a.classList.add("hidden");
   });
+  // sinon il n 'est pas connecté et on supprime alors les onglets membres et  projets
 } else {
   document.querySelectorAll('nav a:not([href="index.html"])').forEach((a) => {
     a.classList.add("hidden");
@@ -18,16 +20,26 @@ if (localStorage.getItem("login") === "true") {
 }
 
 //Footer
-document.querySelector("footer button")?.addEventListener("click", () => {
+
+//on selectionne le bouton dans le footer si le footer existe
+document.querySelector("footer button") ?.addEventListener("click", () => {
+  //on va sur la route qui permet de se delogger
   fetch(addressBack + "/logout");
+  //vu qu on se delogue on passe le login a false ce qui va permmettre de faire disparaitre les onglets interdits
   localStorage.setItem("login", "false");
+  //une fois delogué on est renvoyer a l 'accueil
   window.location.href = "/ideaBoxFront/";
 });
 
+
 //Index.js
+
+//on capture l 'element qui a l ID form-index, si il existe on va ecouter l'evenement submit et désactiver le comportement par defaut
 const form = document.getElementById("form-index");
-form?.addEventListener("submit", async (event) => {
-  event.preventDefault(); //empeche le comportement par defaut
+form ?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+
   const response = await fetch(addressBack, {
     method: "POST",
     headers: {
@@ -54,7 +66,6 @@ form?.addEventListener("submit", async (event) => {
 fetch(addressBack + "/projects/all")
   .then((reponse) => reponse.json())
   .then((projects) => {
-    console.log(projects);
     const template = document.querySelector("#templateProject");
     const container = document.querySelector(".container");
     projects.forEach((project) => {
@@ -96,3 +107,62 @@ fetch(addressBack + "/projects/all")
       container.appendChild(clone);
     });
   });
+
+                                                          //TENTATIVES...
+
+//membres.js
+
+fetch(addressBack + "/members/all")
+  .then((reponse) => reponse.json())
+  .then((members) => {
+    const templateM = document.querySelector("#templateMembre");
+    const grid = document.querySelector(".grid");
+    members.forEach((member) => {
+      const cloneM = document.importNode(templateM.content, true);
+      cloneM.querySelector("h3").textContent = member.firstname;
+      cloneM.querySelector("h3+p").textContent = member.mail;
+      grid.appendChild(cloneM);
+    });
+  });
+
+
+//formulaire d'ajout de projet.js
+
+function masquer_div(masquer) {
+  if (document.getElementById(masquer).style.display == 'none') {
+    document.getElementById(masquer).style.display = 'block';
+  } else {
+    document.getElementById(masquer).style.display = 'none';
+  }
+}
+
+//traitement du form register
+
+const formR = document.getElementById("form-register");
+formR?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+
+  const responseR = await fetch(addressBack + "/register", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      prenom: formR.firstname,
+      nom: formR.lastname,
+      mail: formR.mail.value,
+      password: formR.password.value,
+      confirmation: formR.password.value
+    }),
+  });
+  const jsonR = await responseR.json();
+  if (jsonR.firstname && jsonR.lastname && jsonR.mail && jsonR.password && !jsonR.error) {
+    localStorage.setItem("login", "true");
+    window.location.href = "/ideaBoxFront/membres.html";
+  } else {
+    document.querySelectorAll("input").forEach((input) => {
+      input.classList.add("error");
+    });
+  }
+});

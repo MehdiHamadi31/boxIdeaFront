@@ -81,10 +81,12 @@
         </template>
       </div>
 
-      <div class="container">
+      <!-- <div class="container"> -->
+        <div id="masquer">
         <form
           class="form"
           action="http://127.0.0.1:3333/projects/all"
+          target="_self"
           method="post"
         >
           <div id="pop">
@@ -112,6 +114,8 @@
           </div>
         </form>
       </div>
+      <input id="newP" type = "button" value = "+1" onclick = "masquer_div('masquer');" />
+      <!-- </div> -->
     </main>
   </body>
   <footer>
