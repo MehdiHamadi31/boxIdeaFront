@@ -12,7 +12,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="./index.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/register.js" defer></script>
+
     <title>Inscription</title>
   </head>
   <body>
@@ -55,14 +57,46 @@
     <main class="index">
       <div class="container">
         <h1>Création de votre compte</h1>
-        <form class="form" id="form-register" action="http://127.0.0.1:3333/register" method="post">
+        <form
+          class="form"
+          id="form-register"
+          action="http://127.0.0.1:3333/register"
+          method="post"
+        >
           <h2>Inscription</h2>
-          <label for="nom">Veuillez entrer votre prenom</label>
-          <input type="text" name="prenom" placeholder="prenom" id="firstname" />
           <label for="nom">Veuillez entrer votre nom</label>
-          <input type="text" name="nom" placeholder="nom" id="lastname" />
+          <input
+            type="text"
+            name="lastname"
+            placeholder="nom"
+            id="lastname"
+            required
+          />
+          <label for="nom">Veuillez entrer votre prenom</label>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="prenom"
+            id="firstname"
+          />
+          <label for="profile">Photo de profil :</label>
+
+          <input
+            type="file"
+            id="profile"
+            name="profile"
+            accept="image/png, image/jpeg"
+            required
+          />
+
           <label for="mail">Veuillez entrer votre email</label>
-          <input type="email" name="mail" placeholder="mail" id="mail" />
+          <input
+            type="email"
+            name="mail"
+            placeholder="mail"
+            id="mail"
+            required
+          />
           <label for="mdp">Saissir votre mot de passe</label>
           <input
             type="password"
@@ -70,13 +104,8 @@
             placeholder="mot de passe"
             id="password"
           />
-          <label for="mdp">Confirmer votre mot de passe</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="mot de passe"
-            id="password"
-          />
+
+          <p class="hidden">Verifiez vos informations</p>
           <div class="buttons">
             <button type="submit">Valider</button>
           </div>

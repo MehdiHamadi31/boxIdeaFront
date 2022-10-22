@@ -3,6 +3,8 @@
   display: none;
 }
 
+
+
 body {
   height: 100vh;
   display: grid;
@@ -154,7 +156,7 @@ main.index {
   font-size: 12px;
   margin-bottom: 8px;
 }
-.index input {
+.index input:not(#profile) {
   border-radius: 7px;
   padding-bottom: 5px;
   height: 30px;
@@ -163,7 +165,7 @@ main.index {
 .index input:not(.error) {
   margin-bottom: 20px;
 }
-.index input::placeholder {
+.index input:not(#profile)::placeholder {
   font-size: 10px;
   padding-left: 10px;
 }
@@ -416,4 +418,12 @@ main.index {
   margin-bottom: 35px;
   height: 50px;
   width: 400px;
+}
+
+#identity{
+  width: 80px;
+  height: auto;
+}
+#identity-wraper{
+  text-align: center;
 }

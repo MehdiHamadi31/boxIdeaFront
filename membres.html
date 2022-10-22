@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/membres.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="./index.js" defer></script>
 
+    <title>Membres</title>
+  </head>
 
-  <title>Membres</title>
-</head>
-
-<body>
-  <header>
-    <a href="index.html"><img src="ressources/logo.png" alt="notre logo" /></a>
-    <svg class="burger" width="32" height="32" viewBox="0 0 48 48">
-      <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
-        <path d="M7.94971 11.9497H39.9497" />
-        <path d="M7.94971 23.9497H39.9497" />
-        <path d="M7.94971 35.9497H39.9497" />
-      </g>
-    </svg>
-    <nav class="mobile-nav hide">
-      <ul>
-        <li>
-          <a href="index.html">Accueil</a>
-        </li>
-        <li><a href="membres.html"><u>Membres</u></a></li>
-        <li><a href="projets.html">Projets</a></li>
-      </ul>
-
-    </nav>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Accueil</a>
-        </li>
-        <li>
-          <a href="membres.html"><u>Membres</u></a>
-        </li>
-        <li>
-          <a href="projets.html">Projets</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="membres">
-    <div class="grid">
-      <template id="templateMembre">
-        <div class="card">
-          <div class="wrapperMembre">
-            <h3></h3>
-            <p></p>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="ressources/logo.png" alt="notre logo"
+      /></a>
+      <svg class="burger" width="32" height="32" viewBox="0 0 48 48">
+        <g
+          fill="none"
+          stroke="#000"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="4"
+        >
+          <path d="M7.94971 11.9497H39.9497" />
+          <path d="M7.94971 23.9497H39.9497" />
+          <path d="M7.94971 35.9497H39.9497" />
+        </g>
+      </svg>
+      <nav class="mobile-nav hide">
+        <ul>
+          <li>
+            <a href="index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="membres.html"><u>Membres</u></a>
+          </li>
+          <li><a href="projets.html">Projets</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="membres.html"><u>Membres</u></a>
+          </li>
+          <li>
+            <a href="projets.html">Projets</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="membres">
+      <div class="grid">
+        <template id="templateMembre">
+          <div class="card">
+            <div class="wrapperMembre">
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="wraperImage">
+              <img
+                src="https://play-lh.googleusercontent.com/ecbXmgbcfIE631S3pQmkPxT9B1NBkKqAIWte9dFH37uBwC1hvuDQ2laeeosA7neBvbpl"
+                alt="photo du membre"
+              />
+            </div>
+            <p>J'ai obtenu :</p>
+            <p class="score">26</p>
+            <p>vote<span class="pluriel">s</span></p>
           </div>
-          <div class="wraperImage">
-            <img
-              src="https://play-lh.googleusercontent.com/ecbXmgbcfIE631S3pQmkPxT9B1NBkKqAIWte9dFH37uBwC1hvuDQ2laeeosA7neBvbpl"
-              alt="photo du membre">
-
-          </div>
-          <p>J'ai obtenu : </p>
-          <p class="score">26</p>
-          <p>vote<span class="pluriel">s</span></p>
-        </div>
-      </template>
-    </div>
-  </main>
-</body>
-<footer>
-  <p>© Tous droits réservés</p>
-  <button type="submit">Déconnexion</button>
-</footer>
-
+        </template>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p>© Tous droits réservés</p>
+    <button type="submit">Déconnexion</button>
+  </footer>
 </html>
