@@ -9,7 +9,7 @@ burger.addEventListener("click", () => {
 
 //on cherche la clé loggin si elle est a true  c 'est que la personne est logger et on supprime alors l accueil
 if (localStorage.getItem("login") === "true") {
-  document.querySelectorAll('a[href="index.html"]').forEach((a) => {
+  document.querySelectorAll('li a[href="index.html"]').forEach((a) => {
     a.classList.add("hidden");
   });
   // sinon il n 'est pas connecté et on supprime alors les onglets membres et  projets

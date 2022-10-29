@@ -272,6 +272,9 @@ main.index {
   background-color: #3a3939;
   color: #ffffff;
   cursor: pointer;
+  max-width: 100px;
+  min-height: 40px;
+
 }
 .total-vote {
   border: 2px solid #121212;
@@ -312,6 +315,10 @@ main.index {
   }
   .projets .total-vote {
     margin-bottom: 25px !important;
+  }
+  .projets .vote {
+    margin-bottom: 15px;
+    justify-content: center;
   }
 }
 
@@ -482,7 +489,7 @@ main.index {
 }
 
 /*******Tests*********/
-
+/* 
 #pop {
   background-color: #ddebff;
   padding: 30px;
@@ -507,4 +514,4 @@ main.index {
 }
 #identity-wraper {
   text-align: center;
-}
+} */
