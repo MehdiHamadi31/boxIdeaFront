@@ -15,7 +15,6 @@
     <script src="./scripts/index.js" defer></script>
     <script src="./scripts/membres.js" defer></script>
 
-
     <title>Membres</title>
   </head>
 
@@ -63,6 +62,40 @@
       </nav>
     </header>
     <main class="membres">
+      <div id="owner">
+        <template id="owner-template">
+          <form id="owner-form">
+            <label for="profile">
+              <img
+                id="owner-profile"
+                src="/ideaBoxFront/ressources/empty-user.jpg"
+                alt="my profile"
+              />
+            </label>
+            <input
+              type="file"
+              id="profile"
+              name="profile"
+              accept="image/png, image/jpeg"
+            />
+            <div class="right">
+              <div>
+                <input type="text" placeholder="nom" name="lastname" id="owner-lastname" />
+                <input type="text" placeholder="prenom" name="firstname" id="owner-firstname" />
+                <input type="text" placeholder="mail" name="mail" id="owner-mail"/>
+              </div>
+            </div>
+          </form>
+          <div id="owner-score">
+            <div>
+              <p>J'ai obtenu :</p>
+              <p id="mon-score"></p>
+              <p>votes</p>
+            </div>
+          </div>
+        </template>
+      </div>
+
       <div class="grid">
         <template id="templateMembre">
           <div class="card">
@@ -77,7 +110,7 @@
               />
             </div>
             <p>J'ai obtenu :</p>
-            <p class="score">26</p>
+            <p class="score"></p>
             <p>vote<span class="pluriel">s</span></p>
           </div>
         </template>
