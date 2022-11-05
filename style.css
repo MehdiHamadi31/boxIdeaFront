@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 body {
@@ -213,6 +213,45 @@ main.index {
 }
 
 /*******Projets*********/
+.delete-project{
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  right:0;
+  margin: 10px 10px 0 0;
+
+}
+#create-project-error{
+  color:red;
+  display: inline;
+}
+#add-project{
+  display: flex;
+  position: fixed;
+  margin: 0 20px 110px 0;
+  bottom:0;
+  right:0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #3a3939;
+  color: #ffffff;
+  height: 70px;
+  width: 70px;
+
+}
+
+.projets .my-projects-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  width: 80%;
+  gap: 20px;
+
+
+}
+
 .projets .container {
   display: grid;
   grid-gap: 40px;
@@ -222,6 +261,7 @@ main.index {
   margin: 60px auto;
 }
 .card {
+  position: relative;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -281,6 +321,75 @@ main.index {
   padding: 5px 10px !important;
   margin: 0 !important;
 }
+
+#create-project{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  align-items: center;
+  top: 0;
+  left:0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(18, 18, 18, 0.4);
+  
+
+}
+#create-project form{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+  max-width: 700px;
+}
+#create-project h3{
+  text-align: center;
+}
+#create-project label{
+  display: block;
+  font-size: 12px;
+  margin-bottom: 8px;
+
+}
+#create-project input, #create-project textarea{
+  display: block;
+  width: 100%;
+  border-radius: 7px;
+  padding-bottom: 5px;
+  height: 30px;
+  border: 1px solid #121212;
+}
+#create-project textarea{
+  height: unset;
+}
+#create-project input{
+  margin-bottom:15px; ;
+}
+
+
+
+
+#create-project input:not(.error), #create-project textarea:not(.error) {
+  margin-bottom: 20px;
+}
+#create-project input::placeholder, #create-project textarea::placeholder {
+  font-size: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#project-button{
+  margin-right: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #a397fa;
+  border-radius: 7px;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 400px) {
   .vote {
     padding: 0 10px;
@@ -339,7 +448,9 @@ main.index {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+
 }
+
 .membres h3,
 .membres h3 + p {
   color: #ffffff;
@@ -426,6 +537,9 @@ main.index {
   height: 100%;
   object-fit: contain;
 }
+.membres #owner form > label img.custom {
+  object-fit: cover;
+}
 .membres .right {
   display: flex;
   align-items: center;
@@ -489,17 +603,9 @@ main.index {
 }
 
 /*******Tests*********/
-/* 
-#pop {
-  background-color: #ddebff;
-  padding: 30px;
-}
-#bt {
-  position: relative;
-}
-#masquer {
-  display: none;
-}
+
+
+
 #newP {
   background-color: white;
   margin-left: 550px;
@@ -514,4 +620,4 @@ main.index {
 }
 #identity-wraper {
   text-align: center;
-} */
+} 

@@ -32,6 +32,7 @@ fetch(addressBack + "/members/all", {
         cloneM.querySelector("#mon-score").textContent = member.voted;
         if (member.profile) {
           
+          cloneM.querySelector("#owner-profile").classList.add('custom');
           cloneM.querySelector("#owner-profile").src = addressBack + member.profile;
         }
         ownerContainer.appendChild(cloneM);

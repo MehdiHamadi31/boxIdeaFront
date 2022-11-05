@@ -9,10 +9,13 @@ fetch(addressBack + "/projects/all", {
   .then((projects) => {
     const template = document.querySelector("#templateProject");
     const container = document.querySelector(".container");
+    const myProjectContainer = document.querySelector(".my-projects-container");
+
     projects.forEach((project) => {
       const clone = document.importNode(template.content, true);
       const button = clone.querySelector("button.vote");
       const totalVote = clone.querySelector(".total-vote");
+      const deleteButton = clone.querySelector(".delete-project");
       clone.querySelector("h3").textContent = project.title;
       clone.querySelector("h3+p").textContent = project.description;
       clone.querySelector("span.name").textContent = project.member.firstname;
@@ -47,19 +50,17 @@ fetch(addressBack + "/projects/all", {
           }
         });
       }
-      container.appendChild(clone);
+      if (project.owner) {
+        deleteButton.dataset.projectId = project.id;
+        myProjectContainer.appendChild(clone);
+      } else {
+        deleteButton.remove();
+        container.appendChild(clone);
+      }
     });
+    addDeleteListeners();
   });
 
-//formulaire d'ajout de projet.js
-
-function masquer_div(masquer) {
-  if (document.getElementById(masquer).style.display == "none") {
-    document.getElementById(masquer).style.display = "block";
-  } else {
-    document.getElementById(masquer).style.display = "none";
-  }
-}
 //traitement de la création de projet
 
 const formP = document.getElementById("create-form");
@@ -78,13 +79,54 @@ formP?.addEventListener("submit", async (event) => {
       description: formP.description.value,
     }),
   });
-  const jsonP = await responseP.json();
-  if (jsonP.title && jsonP.description && !jsonP.error) {
-    localStorage.setItem("login", "true");
-    window.location.href = addressBack + "/projects/all";
+  const isOk = await responseP.json();
+  if (isOk) {
+    location.reload();
   } else {
-    document.querySelectorAll("input").forEach((input) => {
-      input.classList.add("error");
-    });
+    document.getElementById("create-project-error").classList.remove("hidden");
   }
+});
+
+//Suppression de projet
+function addDeleteListeners() {
+  document.querySelectorAll(".delete-project").forEach((deleteButton) => {
+    deleteButton.addEventListener("click", () => {
+      const projectId = deleteButton.dataset.projectId;
+
+      deleteProjet(projectId);
+    });
+  });
+}
+
+async function deleteProjet(projectId) {
+  const response = await fetch(addressBack + "/projects/delete", {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+      "Content-Type": "application/json",
+    },
+    method: "post",
+    body: JSON.stringify({
+      projectId,
+    }),
+  });
+  const isOk = await response.json();
+  if (isOk) {
+    location.reload()
+  }
+
+}
+
+//masquage du form de creation de projet
+const cover = document.getElementById("create-project");
+const buttonAddProject = document.getElementById("add-project");
+cover.querySelector("form").addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+cover.addEventListener("click", () => {
+  cover.classList.add("hidden");
+  buttonAddProject.classList.remove("hidden");
+});
+buttonAddProject.addEventListener("click", () => {
+  cover.classList.remove("hidden");
+  buttonAddProject.classList.add("hidden");
 });
