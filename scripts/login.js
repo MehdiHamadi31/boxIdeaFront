@@ -18,7 +18,6 @@ form?.addEventListener("submit", async (event) => {
     }),
   });
   const json = await response.json();
-
   if (json.login && !json.error) {
     localStorage.setItem("login", "true");
     localStorage.setItem("token", json.token);
@@ -26,6 +25,7 @@ form?.addEventListener("submit", async (event) => {
   } else {
     document.querySelectorAll("input").forEach((input) => {
       input.classList.add("error");
+      input.nextElementSibling.classList.remove("hidden");
     });
   }
 });

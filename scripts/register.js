@@ -24,6 +24,7 @@ formR?.addEventListener("submit", async (event) => {
   } else {
     document.querySelectorAll("input").forEach((input) => {
       input.classList.add("error");
+      input.nextElementSibling.classList.remove("hidden");
     });
   }
 });

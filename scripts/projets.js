@@ -19,7 +19,12 @@ fetch(addressBack + "/projects/all", {
       clone.querySelector("h3").textContent = project.title;
       clone.querySelector("h3+p").textContent = project.description;
       clone.querySelector("span.name").textContent = project.member.firstname;
-
+      if (project.member.profile) {
+        
+        clone.querySelector(".card-footer .membre img").src = addressBack + project.member.profile;
+      }
+      
+      
       if (project.isAlreadyVoted) {
         button.remove();
         const plural = project.totalVotes > 1 ? "s" : "";
